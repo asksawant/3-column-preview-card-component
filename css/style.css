@@ -1,0 +1,153 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --white:hsl(0, 0%, 100%);
+    --trans-white: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+    --ff-lexed: 'Lexend Deca', sans-serif;
+    --ff-big-sd:'Big Shoulders Display', cursive;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    margin:0 auto;
+    font-family: var(--ff-lexed);
+    background: var(--light-grey);
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    margin: 0 auto;
+    display: flex;
+    /* border: yellow 2px solid; */
+    padding: 3em 1.5em;
+    min-height: calc(100vh - 90px);
+}
+
+.card{
+    margin: 0 auto;
+    /* border: green 2px solid; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+
+.container{
+    margin: 0 auto;
+    /* border: pink 2px solid; */
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    width: 100%;
+}
+
+.card--one{
+    background: var(--bright-orange);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card--two{
+    background: var(--cyan);
+}
+
+.card--three{
+    background: var(--dark-cyan);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.img{
+    max-width: 100%;
+    /* border: red 1px solid; */
+}
+.heading{
+    /* border: red 1px solid; */
+    font-family: var(--ff-big-sd);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 1.2em 0;
+    color: white;
+}
+
+.content{
+    flex-grow: 1;
+    /* border: red 1px solid; */
+    padding-bottom: 3em;
+    line-height: 1.6;
+    color: var(--trans-white);
+}
+
+.cta{
+    /* border: red 1px solid; */
+}
+
+.card--one .btn{
+    color: var(--bright-orange);
+}
+
+.card--two .btn{
+    color:var(--cyan);
+}
+
+.card--three .btn{
+    color: var(--dark-cyan);
+}
+
+.btn{
+    font-size: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border: white 2px solid;
+    border-radius: 4em;
+    padding: 0.75em 1.25em;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    color: var(--white);
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+#bottom{
+    position: relative;
+    bottom:0;
+    left:0;
+} 
+
+@media (min-width: 800px) {
+
+    main{
+        padding: 4em 1.5em;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        max-width: 60%;
+    }
+
+    .card--one{
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .card--three{
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .content{
+        padding-bottom: 6em;
+    }
+}
+
